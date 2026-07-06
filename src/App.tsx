@@ -4,6 +4,7 @@ import { audioCtx } from './hooks/useSoundEffects'
 import { MainMenu } from './components/MainMenu'
 import { RegionGameView } from './components/RegionGameView'
 import { CompletionScreen } from './components/CompletionScreen'
+import { Analytics } from "@vercel/analytics/react"
 
 import { Hub } from './components/Hub'
 import { RiverGameView } from './components/RiverGameView'
@@ -89,6 +90,8 @@ function App() {
       <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
         <ThemeToggle />
       </div>
+
+      <Analytics />
     </div>
   )
 }
