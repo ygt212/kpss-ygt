@@ -9,7 +9,7 @@ export function Hub() {
 
   return (
     <div className="min-h-[100dvh] flex items-center justify-center p-6 animate-fade-in">
-      <div className="max-w-6xl w-full pt-8 md:pt-0">
+      <div className="max-w-6xl w-full pt-24 md:pt-0">
 
         <Countdown />
 

@@ -52,10 +52,12 @@ function App() {
 
   return (
     <div className="text-slate-900 dark:text-slate-100 min-h-screen bg-slate-100 dark:bg-slate-900 transition-colors flex flex-col">
-      {/* Header Logo */}
-      <div className="absolute top-6 left-6 z-50 flex items-center gap-4 pointer-events-none">
-        <img src="/favicon.png" alt="Logo" className="w-36 h-36 drop-shadow-md pointer-events-auto" />
-      </div>
+      {/* Header Logo - Sadece Ana Menüde (Hub) */}
+      {screen === 'hub' && (
+        <div className="absolute top-4 left-4 md:top-6 md:left-6 z-50 flex items-center gap-4 pointer-events-none">
+          <img src="/favicon.png" alt="Logo" className="w-16 h-16 md:w-36 md:h-36 transition-all duration-300 drop-shadow-md pointer-events-auto" />
+        </div>
+      )}
 
       <main className="flex-grow flex flex-col">
         {screen === 'hub' && <Hub />}
