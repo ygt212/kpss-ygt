@@ -3,7 +3,6 @@ import type { GameState, RegionId } from '../types'
 
 interface GameStore extends GameState {
   setScreen: (screen: GameState['screen']) => void;
-  setSelectedRegion: (regionId: RegionId | null) => void;
   setShuffledQueue: (queue: string[]) => void;
   setCurrentTarget: (target: string | null) => void;
   addFoundId: (id: string) => void;
@@ -28,7 +27,6 @@ export const useGameStore = create<GameStore>((set) => ({
   ...initialState,
   
   setScreen: (screen) => set({ screen }),
-  setSelectedRegion: (selectedRegionId) => set({ selectedRegionId }),
   setShuffledQueue: (shuffledQueue) => set({ shuffledQueue }),
   setCurrentTarget: (currentTarget) => set({ currentTarget }),
   addFoundId: (id) => 

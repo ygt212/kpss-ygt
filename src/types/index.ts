@@ -38,8 +38,6 @@ export interface River {
   markerLat: number; // latitude of the representative marker point
 }
 
-export type GameStatus = 'idle' | 'playing' | 'completed';
-
 export interface GameState {
   screen: 'hub' | 'city-region-select' | 'city-region-focus' | 'city-completed' | 'rivers-game' | 'rivers-completed' | 'population-play' | 'population-completed';
   selectedRegionId: RegionId | null;
